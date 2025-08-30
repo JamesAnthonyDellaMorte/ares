@@ -97,6 +97,7 @@ inline auto PI::busWrite(u32 address, u32 data) -> void {
     return;
   }
   if(address >= 0x13ff'0000 && address <= 0x13ff'ffff) {
+    // printf("[PI] ISViewer write: addr=0x%08x data=0x%08x enabled=%d\n", address, (u32)data, cartridge.isviewer.enabled());
     if(cartridge.isviewer.enabled()) {
       writeForceFinish(); //Debugging channel for homebrew, be gentle
       return cartridge.isviewer.write<Size>(address, data);      

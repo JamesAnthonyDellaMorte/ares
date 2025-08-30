@@ -36,4 +36,4 @@ extern Debug _debug;
 
 }
 
-#define debug(function, ...) if constexpr(1) ares::_debug.function(__VA_ARGS__)
+#define debug(function, ...) if constexpr(1) ares::_debug.function()

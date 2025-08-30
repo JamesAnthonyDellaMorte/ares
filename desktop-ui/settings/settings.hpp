@@ -54,7 +54,7 @@ struct Settings : Markup::Node {
 
   struct Input {
     string driver;
-    string defocus = "Pause";
+    string defocus = "Allow";
   } input;
 
   struct Boot {
